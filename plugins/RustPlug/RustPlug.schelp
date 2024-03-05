@@ -1,0 +1,26 @@
+class:: RustPlug
+summary:: An example of using Rust to create a SuperCollider plugin
+related:: TODO
+categories:: UGens>TODO
+
+description::
+
+An example of using Rust to create a SuperCollider plugin
+
+
+classmethods::
+
+method::ar, kr
+
+argument::TODO
+
+argument::TODO
+
+
+examples::
+
+code::
+
+{ RustPlug.ar(/* TODO */) }.play
+
+::
