@@ -1,4 +1,4 @@
-RustPlug : UGen {
+RustGain : UGen {
 	*ar { |input, gain|
 		/* TODO */
 		^this.multiNew('audio', input, gain);

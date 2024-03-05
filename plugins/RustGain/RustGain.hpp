@@ -1,4 +1,4 @@
-// PluginRustPlug.hpp
+// PluginRustGain.hpp
 // Mads Kjeldgaard (mail@madskjeldgaard.dk)
 
 #pragma once
@@ -6,14 +6,14 @@
 #include "SC_PlugIn.hpp"
 #include "myscplug/lib.h"
 
-namespace RustPlug {
+namespace RustGain {
 
-class RustPlug : public SCUnit {
+class RustGain : public SCUnit {
 public:
-    RustPlug();
+    RustGain();
 
     // Destructor
-    // ~RustPlug();
+    // ~RustGain();
 
 private:
     // Calc function
@@ -22,4 +22,4 @@ private:
     // Member variables
 };
 
-} // namespace RustPlug
+} // namespace RustGain

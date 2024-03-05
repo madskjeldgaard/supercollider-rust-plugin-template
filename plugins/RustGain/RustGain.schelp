@@ -1,4 +1,4 @@
-class:: RustPlug
+class:: RustGain
 summary:: An example of using Rust to create a SuperCollider plugin
 related:: TODO
 categories:: UGens>TODO
@@ -21,6 +21,6 @@ examples::
 
 code::
 
-{ RustPlug.ar(/* TODO */) }.play
+{ RustGain.ar(/* TODO */) }.play
 
 ::

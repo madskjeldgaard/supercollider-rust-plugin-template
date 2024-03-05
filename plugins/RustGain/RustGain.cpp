@@ -1,19 +1,19 @@
-// PluginRustPlug.cpp
+// PluginRustGain.cpp
 // Mads Kjeldgaard (mail@madskjeldgaard.dk)
 
 #include "SC_PlugIn.hpp"
-#include "RustPlug.hpp"
+#include "RustGain.hpp"
 
 static InterfaceTable* ft;
 
-namespace RustPlug {
+namespace RustGain {
 
-RustPlug::RustPlug() {
-    mCalcFunc = make_calc_function<RustPlug, &RustPlug::next>();
+RustGain::RustGain() {
+    mCalcFunc = make_calc_function<RustGain, &RustGain::next>();
     next(1);
 }
 
-void RustPlug::next(int nSamples) {
+void RustGain::next(int nSamples) {
 
     // Audio rate input
     const float* input = in(0);
@@ -30,10 +30,10 @@ void RustPlug::next(int nSamples) {
     }
 }
 
-} // namespace RustPlug
+} // namespace RustGain
 
-PluginLoad(RustPlugUGens) {
+PluginLoad(RustGainUGens) {
     // Plugin magic
     ft = inTable;
-    registerUnit<RustPlug::RustPlug>(ft, "RustPlug", false);
+    registerUnit<RustGain::RustGain>(ft, "RustGain", false);
 }
