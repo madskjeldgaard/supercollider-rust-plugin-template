@@ -1,0 +1,35 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Run SuperCollider Rust code tests",
+      "type": "shell",
+      "command": "cd rust/myscplug && cargo test && cd ../..",
+    },
+    {
+      "label": "Configure Rust SuperCollider plugins for release",
+      "type": "shell",
+      "command": "./scripts/commands.sh configure_release",
+    },
+    {
+      "label": "Build Rust SuperCollider plugins for release",
+      "type": "shell",
+      "command": "./scripts/commands.sh build_release",
+      "dependsOn": "Configure Rust SuperCollider plugins for release",
+      "group": {
+        "kind": "build"
+      },
+      "problemMatcher": "$gcc",
+    },
+    {
+      "label": "Install Rust SuperCollider plugins for release",
+      "type": "shell",
+      "command": "./scripts/commands.sh build_and_install",
+      "dependsOn": "Build Rust SuperCollider plugins for release",
+      "group": {
+        "kind": "build"
+      },
+      "problemMatcher": "$gcc",
+    },
+  ]
+}
