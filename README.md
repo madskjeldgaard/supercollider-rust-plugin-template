@@ -28,6 +28,7 @@ To use this, simply clone this repo and replace the "RustGain" name throughout t
 
 A typical workflow for developing an audio plugin using this template looks like this:
 
+0. Make changes to the code
 1. Run the build commands to build and install (see below)
 2. Recompile the SuperCollider class library:
     - In the SuperCollider IDE, run `Language> Recompile Class Library`
