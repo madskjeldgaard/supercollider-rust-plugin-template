@@ -28,7 +28,7 @@ mod tests {
 
     #[test]
     fn it_works() {
-        let result = apply_gain(2, 2);
-        assert_eq!(result, 4);
+        let result = apply_gain(2.0, 2.0);
+        assert_eq!(result, 4.0);
     }
 }
