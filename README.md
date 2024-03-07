@@ -24,6 +24,30 @@ To use this, simply clone this repo and replace the "RustGain" name throughout t
 - CMake >= 3.15
 - Rust
 
+## Workflow
+
+A typical workflow for developing an audio plugin using this template looks like this:
+
+1. Run the build commands to build and install (see below)
+2. Recompile the SuperCollider class library:
+    - In the SuperCollider IDE, run `Language> Recompile Class Library`
+    or:
+    - In SuperCollider code, evaluate `thisProcess.recompile()`
+3. Run your plugin by evaluating this code in SuperCollider:
+
+```supercollider
+s.waitForBoot {
+    "Supercollider sound server booted".postln;
+
+    play{
+        var sig = SinOsc.ar(440)!2;
+        // Run RustGain plugin on a sine wave
+        RustGain.ar(sig, gain: 0.5)
+    }
+
+}
+```
+
 ## Building
 
 Clone the project:
