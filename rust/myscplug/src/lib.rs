@@ -1,5 +1,5 @@
 #[no_mangle]
-pub extern fn apply_gain(input_sample: f32, gain: f32) -> f32 {
+pub extern "C" fn apply_gain(input_sample: f32, gain: f32) -> f32 {
     input_sample * gain
 }
 
