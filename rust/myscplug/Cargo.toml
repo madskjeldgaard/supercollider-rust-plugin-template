@@ -1,5 +1,5 @@
 [package]
-name = "myscplug-crate"
+name = "myscplug"
 version = "0.1.0"
 edition = "2021"
 

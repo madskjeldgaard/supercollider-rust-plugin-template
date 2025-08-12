@@ -3,7 +3,7 @@ include("${CMAKE_CURRENT_LIST_DIR}/CPM.cmake")
 
 # Install corrosion – a Rust to C++ bridge
 cpmaddpackage(NAME Corrosion GITHUB_REPOSITORY corrosion-rs/corrosion GIT_TAG
-              v0.4.7)
+              v0.5.2)
 
 # Rust directory: rust in root dir
 set(RUST_DIR "${CMAKE_CURRENT_SOURCE_DIR}/rust")
@@ -13,15 +13,13 @@ set(RUST_DIR "${CMAKE_CURRENT_SOURCE_DIR}/rust")
 corrosion_import_crate(MANIFEST_PATH "${RUST_DIR}/myscplug/Cargo.toml")
 
 corrosion_add_cxxbridge(
-  myscplug
-  CRATE
-  myscplug-crate
-  MANIFEST_PATH
-  "${RUST_DIR}/myscplug"
+  myscplug-cxx
+  CRATE myscplug
+  MANIFEST_PATH "${RUST_DIR}/myscplug"
   # NOTE: These file paths are relative to the root of the rust crate's src dir
   # eg rust/myscplug/src.
-  FILES
-  "lib.rs")
+  FILES "lib.rs"
+)
 
 if(MSVC)
   # Note: This is required because we use `cxx` which uses `cc` to compile and

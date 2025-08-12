@@ -99,7 +99,7 @@ set(RustGain_schelp_files plugins/RustGain/RustGain.schelp)
 sc_add_server_plugin_with_rust(
   "RustGain/RustGain" # desination directory
   "RustGain" # target name
-  "${RustGain_cpp_files}" "${RustGain_sc_files}" "${RustGain_schelp_files}" "myscplug")
+  "${RustGain_cpp_files}" "${RustGain_sc_files}" "${RustGain_schelp_files}" "myscplug-cxx")
 
 # End target RustGain
 # ##############################################################################
