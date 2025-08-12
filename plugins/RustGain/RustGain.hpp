@@ -4,7 +4,7 @@
 #pragma once
 
 #include "SC_PlugIn.hpp"
-#include "myscplug/lib.h"
+#include "myscplug-cxx/lib.h"
 
 namespace RustGain {
 
