@@ -53,7 +53,7 @@ s.waitForBoot {
 
 Clone the project:
 
-    git clone https://github.com/madskjeldgaard/RustGain
+    git clone https://github.com/madskjeldgaard/supercollider-rust-plugin-template
     cd RustGain
 
 ### Using commands.sh
